@@ -27,7 +27,6 @@ public class Runner {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         logger.info("Драйвер поднят");
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
     }
      @AfterClass

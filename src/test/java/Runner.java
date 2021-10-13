@@ -38,15 +38,10 @@ public class Runner {
     private void auth() throws InterruptedException{
         driver.get("https://otus.ru");
         logger.info("Сайт открыт");
-
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class=\"header2__auth js-open-modal\"]")));
-        WebElement open = driver.findElement(By.xpath("//button[@class=\"header2__auth js-open-modal\"]"));
-        open.click();
-
+        driver.findElement(By.xpath("//button[@class=\"header2__auth js-open-modal\"]")).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@placeholder=\"Электронная почта\"])[3]")));
-        WebElement element = driver.findElement(By.xpath("(//input[@placeholder=\"Электронная почта\"])[3]"));
-        element.sendKeys("pantik96@mail.ru");
-
+        driver.findElement(By.xpath("(//input[@placeholder=\"Электронная почта\"])[3]")).sendKeys("pantik96@mail.ru");
         driver.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("qwerty123");
         driver.findElement(By.xpath("(//button[@type=\"submit\"])[3]")).click();
         logger.info("Авторизация прошла");

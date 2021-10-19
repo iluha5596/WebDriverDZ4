@@ -41,7 +41,7 @@ public class Runner {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class=\"header2__auth js-open-modal\"]")));
         driver.findElement(By.xpath("//button[@class=\"header2__auth js-open-modal\"]")).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@placeholder=\"Электронная почта\"])[3]")));
-        driver.findElement(By.xpath("(//input[@placeholder=\"Электронная почта\"])[3]")).sendKeys("pantik96@mail.ru");
+        driver.findElement(By.xpath("(//input[@placeholder=\"Электронная почта\"])[3]")).sendKeys("@mail.ru");
         driver.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("qwerty123");
         driver.findElement(By.xpath("(//button[@type=\"submit\"])[3]")).click();
         logger.info("Авторизация прошла");
